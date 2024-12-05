@@ -20,3 +20,7 @@ mongoose.connect(process.env.DB_CONNECTOR).then(()=>{
 app.listen(3000, () => {
     console.log("Server is running");
 });
+
+app.get("/", async(req,res) => {
+    res.send("hello");
+});
