@@ -1,0 +1,12 @@
+name: build-and-test
+on:
+    pull_request:
+        branches: [dev]
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+            - name: build & run test
+              run: docker compose up test

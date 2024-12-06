@@ -1,5 +1,7 @@
 services:
   app:
+    container_name: app
+    image: app:dev
     build: .
     command: npm run start-dev
     ports:
@@ -8,3 +10,13 @@ services:
     - .:/src
     env_file:
     - .env
+
+  test:
+    container_name: test
+    image: test:latest
+    build: ../
+    command: npm run test
+    env_file:
+    - ../.env
+    depends_on:
+    - app
