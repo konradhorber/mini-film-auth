@@ -16,7 +16,7 @@ app.use("/api/user", authRoute);
 mongoose.connect(process.env.DB_CONNECTOR)
 
 app.get("/", async(req,res) => {
-    res.send("hello!");
+    res.send("hello");
 });
 
 module.exports = app;
