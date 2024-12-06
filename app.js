@@ -13,14 +13,10 @@ const authRoute = require("./routes/auth");
 app.use("/api/film", filmsRoute);
 app.use("/api/user", authRoute);
 
-mongoose.connect(process.env.DB_CONNECTOR).then(()=>{
-    console.log("DB is connected");
-});
-
-app.listen(3000, () => {
-    console.log("Server is running");
-});
+mongoose.connect(process.env.DB_CONNECTOR)
 
 app.get("/", async(req,res) => {
     res.send("hello!");
 });
+
+module.exports = app;
