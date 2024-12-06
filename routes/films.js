@@ -12,5 +12,4 @@ router.get("/", verifyToken,async(req,res) =>{
         res.status(400).send({message:err});
     }
 });
-
 module.exports = router;

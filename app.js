@@ -22,5 +22,5 @@ app.listen(3000, () => {
 });
 
 app.get("/", async(req,res) => {
-    res.send("hello");
+    res.send("hello!");
 });

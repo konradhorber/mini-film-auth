@@ -9,7 +9,6 @@ const jsonwebtoken = require("jsonwebtoken");
 
 // register flow
 router.post("/register", async(req,res)=>{
-
     // validation for user input
     const {error} = registerValidation(req.body);
     if(error){
