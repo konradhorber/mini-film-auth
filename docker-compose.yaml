@@ -25,5 +25,5 @@ services:
     build: ./
     command: npm run test
     environment:
-      - DB_CONNECTOR=${{ secrets.DB_CONNECTOR }}
-      - TOKEN_SECRET=${{ secrets.TOKEN_SECRET }}
+      - DB_CONNECTOR=${DB_CONNECTOR}
+      - TOKEN_SECRET=${TOKEN_SECRET}
