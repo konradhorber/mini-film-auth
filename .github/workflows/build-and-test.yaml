@@ -21,5 +21,6 @@ jobs:
                 echo TOKEN_SECRET=${{ secrets.TOKEN_SECRET }} >> .env
                 cat .env
                 pwd .env
+                ls
             - name: build & run test
               run: docker compose up test
