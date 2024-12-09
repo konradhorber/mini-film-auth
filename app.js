@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require('dotenv').config();
-console.log(process.env);
+console.log(process.env.DB_CONNECTOR);
 
 app.use(bodyParser.json());
 
