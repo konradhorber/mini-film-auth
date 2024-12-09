@@ -17,7 +17,7 @@ services:
     build: ./
     command: >
       sh -c "pwd &&
-             npm install --dev &&
+             npm install &&
              npm run test"
     env_file:
     - .env
