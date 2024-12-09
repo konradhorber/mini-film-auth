@@ -1,6 +1,6 @@
-name: build-and-test
+name: integration-test
 on:
-    pull_request:
+    push:
         branches: [dev]
 
 env:
@@ -19,5 +19,9 @@ jobs:
                 touch .env
                 echo "DB_CONNECTOR=${{ secrets.DB_CONNECTOR }}" >> .env
                 echo "TOKEN_SECRET=${{ secrets.TOKEN_SECRET }}" >> .env
-            - name: build & run unit-test
-              run: docker compose up unit-test --exit-code-from unit-test
+            - name: build image
+              run: docker image build -t app:latest .
+            - name: build container
+              run: docker container run -d --name app --publish 3000:3000 app:latest
+            - name: run integration test
+              run: docker compose up integration-test --exit-code-from integration-test

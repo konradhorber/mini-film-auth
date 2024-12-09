@@ -3,7 +3,7 @@ const app = express();
 
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-require("dotenv/config");
+require('dotenv').config();
 
 app.use(bodyParser.json());
 
@@ -16,7 +16,9 @@ app.use("/api/user", authRoute);
 mongoose.connect(process.env.DB_CONNECTOR)
 
 app.get("/", async(req,res) => {
-    res.send("hello!");
+    res.send("hello");
 });
+
+app.listen(3000);
 
 module.exports = app;
