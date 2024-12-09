@@ -16,8 +16,6 @@ services:
     image: test:latest
     build: ./
     command: >
-      sh -c "cat package.json &&
-             npm ci &&
-             npm run test"
+      sh -c "npm run test"
     env_file:
     - .env
