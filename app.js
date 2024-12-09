@@ -4,7 +4,6 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 require('dotenv').config();
-console.log(process.env.TOKEN_SECRET);
 
 app.use(bodyParser.json());
 
