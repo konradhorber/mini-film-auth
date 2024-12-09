@@ -23,7 +23,5 @@ jobs:
               run: docker image build -t app:latest .
             - name: build container
               run: docker container run -d --name app --publish 3000:3000 app:latest
-            - name: wait a bit
-              run: sleep 1
             - name: run integration test
               run: docker compose up integration-test --exit-code-from integration-test
