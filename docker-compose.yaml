@@ -1,5 +1,5 @@
 services:
-  app:
+  dev:
     container_name: app
     image: app:dev
     build: .
@@ -14,9 +14,5 @@ services:
   test:
     container_name: test
     image: test:latest
-    build: ../
+    build: ./
     command: npm run test
-    env_file:
-    - ../.env
-    depends_on:
-    - app
