@@ -3,6 +3,6 @@ RUN apk add --update nodejs npm
 COPY . /src
 WORKDIR /src
 RUN npm ci
-RUN ls
+RUN ls -a
 EXPOSE 3000
 CMD ["npm", "run", "start"]
