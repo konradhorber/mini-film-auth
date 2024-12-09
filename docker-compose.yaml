@@ -18,12 +18,3 @@ services:
     command: npm run test
     env_file:
     - .env
-
-  test-github:
-    container_name: test
-    image: test:latest
-    build: ./
-    command: npm run test
-    environment:
-      - DB_CONNECTOR=${DB_CONNECTOR}
-      - TOKEN_SECRET=${TOKEN_SECRET}
