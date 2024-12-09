@@ -17,5 +17,3 @@ services:
     build: ./
     command: >
       sh -c "npm run test"
-    env_file:
-    - .env
