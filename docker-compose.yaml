@@ -11,8 +11,16 @@ services:
     env_file:
     - .env
 
-  test:
-    container_name: test
-    image: test:latest
+  unit-test:
+    container_name: unit-test
+    image: unit-test:latest
     build: ./
-    command: npm run test
+    command: npm run unit-test
+
+  integration-test:
+    container_name: integration-test
+    image: integration-test:latest
+    build: ./
+    network_mode: host
+    command: npm run integration-test
+  

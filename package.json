@@ -5,7 +5,8 @@
   "scripts": {
     "start-dev": "nodemon app.js",
     "start": "node app.js",
-    "test":"jest"
+    "unit-test":"jest tests/unit",
+    "integration-test":"jest tests/integration"
   },
   "author": "",
   "license": "ISC",
