@@ -19,5 +19,6 @@ jobs:
                 touch .env
                 echo DB_CONNECTOR=${{ secrets.DB_CONNECTOR }}>> .env
                 echo TOKEN_SECRET=${{ secrets.TOKEN_SECRET }} >> .env
+                cat .env
             - name: build & run test
               run: docker compose up test
