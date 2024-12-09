@@ -16,8 +16,8 @@ services:
     image: test:latest
     build: ./
     command: >
-      sh -c "pwd &&
-             npm install &&
+      sh -c "cat package.json &&
+             npm ci &&
              npm run test"
     env_file:
     - .env
