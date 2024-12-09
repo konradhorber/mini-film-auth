@@ -16,7 +16,7 @@ services:
     image: test:latest
     build: ./
     command: >
-      sh -c "npm install jest &&
+      sh -c "npm install --dev &&
              npm run test"
     env_file:
     - .env
